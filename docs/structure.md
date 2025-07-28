@@ -6,7 +6,7 @@ This document outlines the full folder structure for both the frontend and backe
 
 ## 🖥 Frontend (`/frontend`)
 
-```plaintext
+```text
 /public
 ├── open-sans/                # Font files
 ├── favicon.ico, *.png        # Icons & logos
