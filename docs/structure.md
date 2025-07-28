@@ -79,7 +79,12 @@ This document outlines the folder structure for both the frontend and backend of
   - `db.js`
 
 - `constants/`
-  - `env.js`, `errors.js`, `notification.js`, `permissions.js`, `roles.js`, `status.js`
+  - `env.js`, 
+  - `errors.js`, 
+  - `notification.js`, 
+  - `permissions.js`, 
+  - `roles.js`, 
+  - `status.js`
 
 - `controllers/` – all route controller handlers
 
@@ -90,38 +95,68 @@ This document outlines the folder structure for both the frontend and backend of
 - `jobs/`
   - `agenda.job.js`
 
-- `lib/`
-  - `api-auth.js`, `api-core.js`, `buy-link-auth.js`, `buy-link-signature.js`
-  - `ipn.js`, `order.js`, `subscription.js`
+- `lib/` – core sdk files for 2Checkout
+  - `api-auth.js`, 
+  - `api-core.js`, 
+  - `buy-link-auth.js`, 
+  - `buy-link-signature.js`
+  - `ipn.js`, 
+  - `order.js`, 
+  - `subscription.js`
 
 - `logs/`
-  - `exceptions.log`, `rejections.log`
+  - `exceptions.log`, 
+  - `rejections.log`
 
 - `middleware/`
   - `auth.middleware.js`
 
-- `models/`
-  - `Analytics.js`, `Invoice.js`, `Notification.js`, `Order.js`, `Quote.js`, `User.js`, `Vector.js`
+- `models/` 
+  - `Invoice.js`, 
+  - `Notification.js`, 
+  - `Order.js`, 
+  - `Organization.js`,
+  - `PaymentSummary.js`,
+  - `Quote.js`, 
+  - `Receipt`,
+  - `Salesman.js`,
+  - `User.js`, 
+  - `Vector.js`
 
 - `provider/`
-  - `twocheckout.provider.js`, `farmatter.helper.js`
+  - `twocheckout.provider.js`, 
+  - `farmatter.helper.js`
 
 - `public/`
-  - `uploads/`, `index.html`, `cancel.html`, `success.html`, `*.png`
+  - `uploads/`, 
+  - `index.html`, 
+  - `cancel.html`, 
+  - `success.html`, 
+  - `*.png`
 
 - `routes/`
-  - `auth.routes.js`, `order.routes.js`, `quote.routes.js`, `vector.routes.js`
-  - `invoice.routes.js`, `notification.routes.js`, `user.routes.js`
-  - `analytics.routes.js`, `organization.routes.js`
+  - `auth.routes.js`, 
+  - `order.routes.js`, 
+  - `quote.routes.js`, 
+  - `vector.routes.js`
+  - `invoice.routes.js`, 
+  - `notification.routes.js`, 
+  - `user.routes.js`
+  - `analytics.routes.js`, 
+  - `organization.routes.js`
 
 - `services/` – core business logic per module
 
 - `strategies/`
-  - `jwt.strategy.js`, `local.strategy.js`
+  - `jwt.strategy.js`, 
+  - `local.strategy.js`
 
 - `utils/`
-  - `token.util.js`, `email.util.js`, `otp.util.js`, `codeGen.util.js`
-  - `pdf.util.js`, `testJobs.util.js`, `templating.util.js`
+  - `token.util.js`, 
+  - `email.util.js`, 
+  - `otp.util.js`,
+  - `pdf.util.js`, 
+  - `templating.util.js`
 
 - Root Files:
   - `.env`, `app.js`, `main.js`, `auth.js`, `socket.js`, `twocheckout.js`, `Dockerfile`, `package.json`
