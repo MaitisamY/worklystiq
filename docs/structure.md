@@ -1,173 +1,127 @@
 # 📁 Worklystiq Codebase Structure
 
-This document outlines the full folder structure for both the frontend and backend of the Worklystiq project.
+This document outlines the folder structure for both the frontend and backend of the Worklystiq platform.
 
 ---
 
 ## 🖥 Frontend (`/frontend`)
 
-```text
-/public
-├── open-sans/                # Font files
-├── favicon.ico, *.png        # Icons & logos
-├── site.webmanifest          # PWA manifest
-├── worldcities.csv           # Location data
+- `public/`
+  - `open-sans/` – font files
+  - `*.png`, `favicon.ico` – icons and logos
+  - `site.webmanifest` – PWA manifest
+  - `worldcities.csv` – city dataset
 
-/src
-├── assets/                   # Static files
-│   ├── countries.json
-│   ├── notification.wav
-│   └── worklystiq-logo.png
-│
-├── components/Global/        # Global UI components
-│   ├── Loader.jsx
-│   ├── Logout.jsx
-│   ├── EditableCostCell.jsx
-│   └── OnboardedWrapper.jsx
-│
-├── config/
-│   └── env.js                # Environment-specific config
-│
-├── constants/
-│   └── requirements.js       # Constants & enums
-│
-├── context/
-│   ├── NotificationProvider.jsx
-│   └── MessageProvider.jsx
-│
-├── hooks/                    # Custom hooks
-│   ├── useAnalytics.js
-│   ├── useOrderJs.js
-│   ├── useVectorJs.js
-│   ├── useSocket.js
-│   └── useThrow.js
-│
-├── layout/                   # Layout components
-│   ├── DashboardLayout.jsx
-│   ├── Body.jsx
-│   ├── Section.jsx
-│   └── Sider.jsx
-│
-├── pages/                    # Page-level routes
-│   ├── Orders.jsx
-│   ├── Quotes.jsx
-│   ├── Vectors.jsx
-│   ├── Invoices.jsx
-│   ├── PaymentSummary.jsx
-│   ├── Sales.jsx
-│   ├── Notifications.jsx
-│   ├── Login.jsx
-│   ├── Signup.jsx
-│   ├── ResetPassword.jsx
-│   ├── Overview.jsx
-│   ├── Settings.jsx
-│   └── Profile.jsx
-│
-├── routes/
-│   ├── config.routes.jsx     # Route definitions
-│   └── role.routes.jsx       # Role-based routing
-│
-├── services/
-│   ├── api.service.js
-│   └── refresh.service.js
-│
-├── stores/
-│   └── useAuthStore.js       # Auth store
-│
-├── utils/
-│   ├── playSound.util.js
-│   ├── formatting.util.js
-│   ├── permission.util.js
-│   └── activity.util.js
-│
-├── App.jsx
-├── main.jsx
-└── ErrorBoundary.jsx
-/config
-└── db.js                      # MongoDB connection
+- `src/`
+  - `assets/`
+    - `countries.json`
+    - `notification.wav`
+    - `worklystiq.png`
+  - `components/Global/`
+    - `Loader.jsx`
+    - `Logout.jsx`
+    - `EditableCostCell.jsx`
+    - `OnboardedWrapper.jsx`
+  - `config/`
+    - `env.js`
+  - `constants/`
+    - `requirements.js`
+  - `context/`
+    - `NotificationProvider.jsx`
+    - `MessageProvider.jsx`
+  - `hooks/`
+    - `useAnalytics.js`
+    - `useOrderJs.js`
+    - `useQuoteJs.js`
+    - `useVectorJs.js`
+    - `useSocket.js`
+    - `useThrow.js`
+  - `layout/`
+    - `DashboardLayout.jsx`
+    - `Sider.jsx`
+    - `Section.jsx`
+    - `Body.jsx`
+  - `pages/`
+    - `Overview.jsx`
+    - `Orders.jsx`
+    - `Quotes.jsx`
+    - `Vectors.jsx`
+    - `Invoices.jsx`
+    - `PaymentSummary.jsx`
+    - `Sales.jsx`
+    - `Users.jsx`
+    - `Notifications.jsx`
+    - `Profile.jsx`
+    - `Login.jsx`
+    - `Signup.jsx`
+    - `ResetPassword.jsx`
+    - `Settings.jsx`
+  - `routes/`
+    - `config.routes.jsx`
+    - `role.routes.jsx`
+  - `services/`
+    - `api.service.js`
+    - `refresh.service.js`
+  - `stores/`
+    - `useAuthStore.js`
+  - `utils/`
+    - `playSound.util.js`
+    - `formatting.util.js`
+    - `activity.util.js`
+    - `permission.util.js`
+  - `App.jsx`, `main.jsx`, `ErrorBoundary.jsx`
 
-/constants
-├── env.js
-├── errors.js
-├── notification.js
-├── permissions.js
-├── roles.js
-└── status.js
+---
 
-/controllers                  # Per-module controller files
+## 🔧 Backend (`/backend`)
 
-/helpers
-├── fieldPopper.helper.js
-└── formatter.helper.js
+- `config/`
+  - `db.js`
 
-/jobs
-└── agenda.job.js             # Background jobs
+- `constants/`
+  - `env.js`, `errors.js`, `notification.js`, `permissions.js`, `roles.js`, `status.js`
 
-/lib
-├── api-auth.js
-├── api-core.js
-├── buy-link-*.js
-├── ipn.js
-├── order.js
-└── subscription.js
+- `controllers/` – all route controller handlers
 
-/logs
-├── exceptions.log
-└── rejections.log
+- `helpers/`
+  - `fieldPopper.helper.js`
+  - `formatter.helper.js`
 
-/middleware
-└── auth.middleware.js        # Auth guards
+- `jobs/`
+  - `agenda.job.js`
 
-/models
-├── Analytics.js
-├── Invoice.js
-├── Notification.js
-├── Order.js
-├── Quote.js
-├── User.js
-└── Vector.js
+- `lib/`
+  - `api-auth.js`, `api-core.js`, `buy-link-auth.js`, `buy-link-signature.js`
+  - `ipn.js`, `order.js`, `subscription.js`
 
-/provider
-├── twocheckout.provider.js
-└── farmatter.helper.js
+- `logs/`
+  - `exceptions.log`, `rejections.log`
 
-/public
-├── uploads/
-├── success.html
-├── cancel.html
-└── favicon.ico
+- `middleware/`
+  - `auth.middleware.js`
 
-/routes
-├── auth.routes.js
-├── order.routes.js
-├── quote.routes.js
-├── vector.routes.js
-├── invoice.routes.js
-├── notification.routes.js
-├── user.routes.js
-├── analytics.routes.js
-└── organization.routes.js
+- `models/`
+  - `Analytics.js`, `Invoice.js`, `Notification.js`, `Order.js`, `Quote.js`, `User.js`, `Vector.js`
 
-/services                     # Business logic per module
+- `provider/`
+  - `twocheckout.provider.js`, `farmatter.helper.js`
 
-/strategies
-├── jwt.strategy.js
-└── local.strategy.js
+- `public/`
+  - `uploads/`, `index.html`, `cancel.html`, `success.html`, `*.png`
 
-/utils
-├── token.util.js
-├── email.util.js
-├── otp.util.js
-├── codeGen.util.js
-├── pdf.util.js
-├── testJobs.util.js
-└── templating.util.js
+- `routes/`
+  - `auth.routes.js`, `order.routes.js`, `quote.routes.js`, `vector.routes.js`
+  - `invoice.routes.js`, `notification.routes.js`, `user.routes.js`
+  - `analytics.routes.js`, `organization.routes.js`
 
-Root Files
-├── app.js
-├── main.js
-├── auth.js
-├── socket.js
-├── twocheckout.js
-├── Dockerfile
-└── package.json
+- `services/` – core business logic per module
+
+- `strategies/`
+  - `jwt.strategy.js`, `local.strategy.js`
+
+- `utils/`
+  - `token.util.js`, `email.util.js`, `otp.util.js`, `codeGen.util.js`
+  - `pdf.util.js`, `testJobs.util.js`, `templating.util.js`
+
+- Root Files:
+  - `.env`, `app.js`, `main.js`, `auth.js`, `socket.js`, `twocheckout.js`, `Dockerfile`, `package.json`
