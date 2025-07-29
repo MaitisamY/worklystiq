@@ -1,4 +1,4 @@
-# <img src="fav.png" alt="logo" width="28" style="vertical-align: middle;" /> Worklystiq Developer Documentation
+# <img src="worklystiq.png" alt="worklystiq logo" width="28" style="vertical-align: middle;" /> Worklystiq Developer Documentation
 
 Welcome to the official developer documentation for **Worklystiq**, a full-featured digitization platform.
 
