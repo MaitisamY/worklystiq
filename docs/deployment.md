@@ -106,7 +106,4 @@ Once the resource is created:
 
 Add environment variables required by backend/frontend:
 
-Copy from
-```bash
-.env.example
-```
+Copy from `.env.example` file and replace with your configs.
