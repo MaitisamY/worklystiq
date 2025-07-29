@@ -11,7 +11,7 @@ Welcome to the official developer documentation for **Worklystiq**, a full-featu
 - **Realtime**: Socket.io
 - **Design System**: Ant Design
 - **Notifications**: In-app (Socket.io) + Email
-- **Deployment**: Docker + PM2 + GitHub + CI/CD (optional)
+- **Deployment**: Hostinger VPS + Coolify + GitHub + CI/CD
 
 ---
 
